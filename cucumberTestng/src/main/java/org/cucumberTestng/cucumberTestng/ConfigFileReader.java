@@ -14,8 +14,5 @@ public class ConfigFileReader {
 		
 		prop.load(new FileInputStream(new File("D:\\Java Documents\\text\\cucumberTestng\\src\\main\\java\\config.properties")));
 		String reportConfigPath = prop.getProperty("reportConfigPath");
-		if(reportConfigPath!= null) return reportConfigPath;
-		else throw new RuntimeException("Report Config Path not specified in the Configuration.properties file for the Key:reportConfigPath");		
-	}
-
-}
+		return reportConfigPath;
+	}}

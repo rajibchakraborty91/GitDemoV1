@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <parameter name="OS" value="Windows"/>
   <test thread-count="5" name="Test">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <exclude name="regression"/>
+      </run>
+    </groups>
     <classes>
-      <class name="org.cucumberTestng.cucumberTestng.TestRunnertest"/>
+      <class name="TestngActPack.TestClass1"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Failed suite [Suite] -->

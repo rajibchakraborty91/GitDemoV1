@@ -49,7 +49,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\Java Documents\text\cucumberTestng\testng.xml</span>
+                    <span>C:\Users\Rajib\git\RajPracv1\cucumberTestng\testngActual.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -102,7 +102,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="org.cucumberTestng.cucumberTestng.TestRunnertest" hash-for-method="feature(Feature1)">feature(Feature1)</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="TestngActPack.TestClass1" hash-for-method="m2(Windows)">m2(Windows)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -120,17 +120,15 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">org.cucumberTestng.cucumberTestng.TestRunnertest</span>
+              <span class="class-name">TestngActPack.TestClass1</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="feature(Feature1)">
-                  </a> <!-- feature(Feature1) -->
-                  <span class="method-name">feature</span>
-                  <span class="parameters">(Feature1)</span>
-                  <em>
-(Runs Cucumber Feature)                  </em>
+                  <a name="m2(Windows)">
+                  </a> <!-- m2(Windows) -->
+                  <span class="method-name">m2</span>
+                  <span class="parameters">(Windows)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -138,16 +136,23 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\Java Documents\text\cucumberTestng\testng.xml</span>
+            <span class="header-content">C:\Users\Rajib\git\RajPracv1\cucumberTestng\testngActual.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;parameter name=&quot;OS&quot; value=&quot;Windows&quot;/&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+    &lt;groups&gt;
+      &lt;run&gt;
+        &lt;include name=&quot;smoke&quot;/&gt;
+        &lt;exclude name=&quot;regression&quot;/&gt;
+      &lt;/run&gt;
+    &lt;/groups&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;org.cucumberTestng.cucumberTestng.TestRunnertest&quot;/&gt;
+      &lt;class name=&quot;TestngActPack.TestClass1&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
@@ -172,10 +177,10 @@
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="test-group">
-              <span class="test-group-name">cucumber</span>
+              <span class="test-group-name">smoke</span>
               <br/>
               <div class="method-in-group">
-                <span class="method-in-group-name">feature</span>
+                <span class="method-in-group-name">m2</span>
                 <br/>
               </div> <!-- method-in-group -->
             </div> <!-- test-group -->
@@ -197,14 +202,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'feature')
-data.setCell(0, 2, 'org.cucumberTestng.cucumberTestng.TestRunnertest')
-data.setCell(0, 3, 2247);
+data.setCell(0, 1, 'm2')
+data.setCell(0, 2, 'TestngActPack.TestClass1')
+data.setCell(0, 3, 37);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 2 seconds</span>
+              <span class="suite-total-time">Total running time: 37 ms</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -219,9 +224,20 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">0 ignored methods</span>
+            <span class="header-content">3 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">TestngActPack.TestClass1</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">m3</span>
+                <br/>
+                <span class="ignored-method-name">m4</span>
+                <br/>
+                <span class="ignored-method-name">m1</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="chronological-Suite" class="panel">
@@ -230,19 +246,11 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">org.cucumberTestng.cucumberTestng.TestRunnertest</div> <!-- chronological-class-name -->
-              <div class="configuration-class before">
-                <span class="method-name">setUpClass</span>
-                <span class="method-start">0 ms</span>
-              </div> <!-- configuration-class before -->
+              <div class="chronological-class-name">TestngActPack.TestClass1</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">feature(Feature1)</span>
-                <span class="method-start">1315 ms</span>
+                <span class="method-name">m2(Windows)</span>
+                <span class="method-start">0 ms</span>
               </div> <!-- test-method -->
-              <div class="configuration-class after">
-                <span class="method-name">tearDownClass</span>
-                <span class="method-start">3569 ms</span>
-              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
