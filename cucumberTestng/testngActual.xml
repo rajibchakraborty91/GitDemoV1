@@ -5,18 +5,24 @@
 <parameter name="OS" value="Windows">
 </parameter>
 
+<listeners>
+<listener class-name="TestngActPack.RetryTransformer"/>
+</listeners>
+
+
  
 
   <test thread-count="5" name="Test">
   
+  
 
-  <groups>
+ <groups>
 <run>
-<include name="smoke">
-</include>
-<exclude name="regression"/>
+<include name="smoke"/>
+<include name="regression"/>
 </run>
 </groups>
+ 
 
   
   

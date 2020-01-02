@@ -11,6 +11,8 @@ public class App
         System.out.println( "Hello World!" );
         
         sumt('c');
+        
+        System.out.println("text");
     }
     
     

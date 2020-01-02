@@ -2,15 +2,35 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <parameter name="OS" value="Windows"/>
+  <listeners>
+    <listener class-name="TestngActPack.RetryTransformer"/>
+  </listeners>
   <test thread-count="5" name="Test">
     <groups>
       <run>
         <include name="smoke"/>
-        <exclude name="regression"/>
+        <include name="regression"/>
       </run>
     </groups>
     <classes>
       <class name="TestngActPack.TestClass1"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestngActPack.TestClass1">
+        <methods>
+          <include name="m3"/>
+          <include name="betest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- TestngActPack.TestClass1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
